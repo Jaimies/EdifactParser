@@ -49,6 +49,11 @@ final class TransactionMessage
         return self::hasUnhSegment(...$messages);
     }
 
+    public function allSegments(): array
+    {
+        return $this->groupedSegments;
+    }
+
     /**
      * @return array<string,SegmentInterface>
      */
